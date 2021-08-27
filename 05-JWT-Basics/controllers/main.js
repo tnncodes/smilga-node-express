@@ -18,6 +18,8 @@ const login = async (req, res) => {
 }
 
 const dashboard = async (req, res) => {
+  console.log(req.headers)
+
   const luckNumber = Math.floor(Math.random()*100)
   res.status(200).json({msg: `Hello, John Doe`, secret: `Here is your authorized data, your luck number is ${luckNumber}`})
 }
